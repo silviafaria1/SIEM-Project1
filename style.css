@@ -1,0 +1,432 @@
+<style>
+	
+	/* All elements */
+    * {
+      box-sizing: border-box; /*The width and height properties (and min/max properties) includes content, padding and border*/
+    }
+
+	/*------------------------------------- HTML -------------------------------------------*/
+	html {
+	  scroll-behavior: smooth;
+	  overflow-x: hidden;
+	}
+	
+    /*------------------------------------- Body -------------------------------------------*/
+    body {
+      font-family: "Montserrat";
+      margin: 0;
+	  color: black;
+    }
+
+    /*----------------------------------- Navigation bar -----------------------------------*/	
+	.navbar {
+	  position:fixed;
+	  background-color: white;
+	  font-size: 16px;
+	  width: 100%;
+	  z-index: 1;
+	}
+	
+	.navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+	  border-bottom: 1px solid #C9C9C9;
+	  background-color: white;
+    }
+
+    .navbar li {
+      float: left;
+	  align-items: center;
+    }
+
+    li a,
+    .dropbtn {
+      display: inline-block;
+      color: #3B3838;
+      text-align: center;
+      padding: 5px 10px;
+      text-decoration: none;
+	  transition: 0.3s;
+    }
+	
+	.nameblog{ /* different font-family and size for name of the blog */
+	  font-family: "Pacifico";
+	  font-size: 25px;
+	}
+	
+	.normalMenu {
+	  position: flex;
+	  margin-top: 15px;
+	  align-items: center;
+	}
+	
+	/* Dropdown content */
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 16px 16px 0px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+
+    .dropdown-content a {
+      color: #3B3838;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+	
+	/* NavBar Animations */
+	li a:hover,
+    .dropdown:hover .dropbtn {
+      color: #AFABAB;
+    }
+	
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+	
+	.active {
+	  text-decoration: underline;
+	  text-underline-position: under;
+	}
+	
+	/*--------------------------------------- Header ---------------------------------------*/
+    .header img{
+	  object-fit: cover;
+	  width: 100%;
+	  height: 90vh;
+    }
+	
+	/*Home page has different configuration*/
+	#headerHome a{
+	  position: relative; 
+	  bottom: 120px;
+	  left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+	  font-size: 250%;	
+	  text-decoration: none;
+	  color: white;
+	}
+	
+	#headerHome img{
+	  object-fit: cover;
+	  width:100%;
+	  height: 100vh;
+	}
+	
+	/*----------------------------- Pag 1 (Home) - Introduction -----------------------------*/	
+	#intro_div img{
+	  width: 60%;
+	  height: auto;
+	  padding: 15% 2% 20% 20%;
+	}
+	
+	#intro_text {
+	  padding: 1% 8% 5% 0%;
+	}
+	
+	#intro_text p, #intro_text a {
+	  font-size: 25px;
+	  text-align: justify;
+	}
+	#intro_text a{
+	  text-decoration: none;
+	  font-family: "Montserrat";
+	  font-weight: 600;
+	  color: #2D4F8B; 
+	  transition: 0.4s;
+	}
+	
+	#intro_text a:hover{
+	  color: #6E91D0; 
+	}
+	
+	/*-------------------------------- Pag 2 - Quem sou eu?  --------------------------------*/
+	.history_img {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 100%;
+	  height: auto;
+	  margin-bottom: 40px;
+	}	
+	
+	/*---------------------------- Pag 3 and derivatives - Travels --------------------------*/
+	.dest { /*Each destination*/
+	  position: relative;  
+	  text-align: center;
+	  margin: 1%;
+	}
+	
+	.img_dest { /*Images*/
+	  vertical-align: middle;
+	  object-fit: cover;
+	  width: 22vw;
+	  height: 57vh;
+	  opacity: 0.7;
+	  transition: 0.4s;
+	}
+	
+	.dest:hover .img_dest{
+		opacity:0.9;
+	}
+	
+	/*Legends travel page*/
+	.legend {
+	  color: white;
+	  font-size: 44px;
+	  font-family: "Montserrat";
+	  font-weight: 600;
+	  position: absolute; 
+	  top: 50%;
+	  left: 50%;
+      transform: translate(-50%, -50%);
+	}
+	
+	/*Legends attractions pages*/
+	.dest .content {
+	  position: absolute;
+	  bottom: 0;
+      text-align: right;
+	  background-color: rgba(24, 23, 23, 0.2);
+	  font-size: 20px;
+	  color: white;
+	  font-family: "Montserrat";
+	  width: 100%;
+	}
+	
+	/*Inspire Phrase*/
+	.inspire {
+	  text-align: center;
+	}
+	
+	/*Videos*/
+	.video{
+	  width: 60vw;
+	  height: 75vh;
+	  margin-left: auto;
+      margin-right: auto;
+      display: block;
+	  margin-bottom: 30px;
+	}
+	/*---------------------------------- Pag 4 - Travel Tips ---------------------------------*/
+	#center { 
+	  text-align: center;
+	  color: #2D4F8B;
+	}
+	
+	#tips_image {
+	  display: block;
+	  object-fit: cover;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 80%;
+	  height: 50vh;
+	  margin-bottom: 20px;
+	}
+	
+	#more_items_space li{
+	  margin-bottom: 10px;
+	}
+
+	/*-------------------------------- Pag 5 - Download files --------------------------------*/
+	#files_display a{
+	  text-align: center;
+	}
+	
+	.file { /*Image of each download file*/
+	  max-width: 60%;
+	  height: auto;
+	  margin-bottom: 40px;
+	  transition: transform .5s;
+	}
+	
+	.file:hover{
+	  transform: scale(1.2);
+	}
+
+	/*------------------------------- Common among pages ------------------------------*/
+	h1 {
+	  font-family: "Montserrat";
+	  font-weight: 600;
+	  font-size: 35px;
+	}
+	
+	/* Row display - home and downloads and travels*/
+	#intro_div, #files_display, .destinos{ 
+	  /*Note: ids of intro and files are different because they have different behaviours on the responsiveness*/
+	  display: flex;
+	  flex-direction: row;
+	  align-items: center;
+	  justify-content: center; 
+	}	
+	
+	.texto {
+	  margin-left: 9%; 
+	  margin-right: 9%; 
+	  text-align: justify;
+	}
+	
+	.texto p, .texto ul {
+	  font-size: 20px;
+	}
+	
+    /*------------------------------------ Footer -------------------------------------*/
+    .footer {
+	  position: relative;
+      padding: 1px;
+      text-align: center;
+      background: #3B3838;
+	  color: #D9D9D9;
+	  font-size: 20px;
+    }
+	
+	.email{
+	  text-decoration: none;
+	  color: #D9D9D9;
+	  transition: 0.3s;
+	}
+	
+	.email:hover{
+	  color: #AFABAB;	
+	}
+	
+	.top-right {
+	  position: absolute;
+      right: 16px;
+	  top: 15px;
+	  line-height: 10%;
+    }
+	
+	.top-left {
+	  position: absolute;
+	  left: 16px;
+	  top: 2px;
+	  line-height: 10%;  
+	}
+	
+	.top-left a{
+	  transition: 0.3s;
+	}
+
+	.top-left a:hover{
+	  color: #AFABAB;
+	}
+	
+	.bottom-center {
+	  margin-top: 110px; 
+	  line-height: 30%;
+	}
+	
+	.top-left a {
+	  text-decoration: none;
+	  color: #D9D9D9;
+	  font-size: 30px;
+	  margin-right: 10px;
+	}
+	
+	/*----------------- Responsive layout - screen is less than 700px -----------------*/
+    @media screen and (max-width: 700px) {
+	  /*Change font size*/
+	  #intro_text p, #intro_text a {
+		font-size: 20px;
+      }
+	  h1 {
+		font-size: 30px; 
+		text-align: left;
+	  }
+	  .footer { 
+	    font-size: 15px;
+	  }
+	  .texto p, .texto ul{
+		font-size: 15px;
+	  } 
+	  .dest { 
+	    font-size: 30px;
+	  }
+	  .legend_attra {
+	    font-size: 18px;
+	  }
+	  .dest .content {
+	    font-size: 18px;
+	  }
+	  #headerHome a{ 
+	    display:none;
+	  }
+	  
+	  /*Change size of header images*/
+	  #headerHome img {
+		width: 100%;
+		height: 50vh;
+	  }
+	  .header img{
+	    width: 100%;
+	    height: 40vh;
+      }
+ 
+	  /*Change home page display*/
+	  #intro_div {
+		flex-direction: column-reverse;
+      } 
+	
+	  #intro_div img{
+		display: block;
+	    width: 35%;
+	    height: auto;
+		padding: 0;
+		margin: 5% auto 6% auto;   
+	  }
+	  #intro_text {
+		padding: 0;
+		margin: 0% 5% 0% 5%;
+	  }
+	  
+	  /*Change display travels page*/
+	  .destinos { 
+	    flex-direction: column; 
+      }
+	  .img_dest { 
+		width: 80vw;
+		height: 60vh;
+	  }
+	
+	  /*Change video size*/
+	  .video{
+	    width: 80vw;
+	    height: 50vh;
+	  }
+	  
+	  /*Change Image of tips page*/
+	  #tips_image{
+		height: 30vh;
+	  }
+	
+	  /*Change footer*/ 
+	  .top-right {
+	    position: relative;
+	    margin-left: 10%;  
+	    margin-top: 5%;
+	    line-height: 10%;
+		top: 0;
+      }
+	  .top-left {
+	    position: relative;
+	    line-height: 20%; 
+	  }
+	  .bottom-center {
+	    margin-top: 5%; 
+	    margin-left: 5%; 
+	  }
+    }
+
+  </style>

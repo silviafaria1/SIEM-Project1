@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<!-------------------------------------- Head div ---------------------------------------->
+<head>
+  <title>Travel Blog</title>
+  <link rel="icon" href="Imagens/icon1.png" sizes="32x32" type="image/icon type">
+  <meta charset="UTF-8">
+  
+  <!---------------------------------- Responsiveness ------------------------------------>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!------------------------------------ CSS File ---------------------------------------->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <!------------------------------------ Icons ------------------------------------------->
+  <script src="https://kit.fontawesome.com/7ac31800c5.js" crossorigin="anonymous"></script> 
+  
+  <!------------------------------------ Export Google Fonts ----------------------------->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+</head>
+
+<!-------------------------------------- Body div --------------------------------------->
+<body>
+  <!------------------------------------ Navbar ----------------------------------------->
+  <div class="navbar">
+	<ul>
+		<li><a href="index.html" class="nameblog">Travel Blog</a></li>
+		<li><a href="quemsoueu.html" class="normalMenu">Quem sou eu?</a></li>
+		<li class="dropdown normalMenu">
+		<a href="viagens.html" class="dropbtn">Viagens</a>
+		<div class="dropdown-content">
+			<a href="mexico.html">México</a>
+			<a href="sal.html">Ilha do Sal</a>
+			<a href="maiorca.html">Palma de Maiorca</a>
+			<a href="madeira.html">Madeira</a>
+		</div>
+		</li>
+		<li><a href="dicas.html" class="normalMenu">Dicas</a></li>
+		<li><a href="downloads.html" class="normalMenu">Downloads</a></li>
+	</ul>
+  </div>
+  
+  <!--------------------------------- Header -------------------------------------------->
+  <div id="headerHome">
+	 <img src="Imagens/home.jpg" alt="Praia">
+	 <a href="#intro_div"> <i class="fas fa-chevron-down"></i> </a>
+  </div>
+  
+  <!-------------------------------- Introduction --------------------------------------->
+  <div id="intro_div">
+    <div>
+	  <img src="Imagens/eu.jpg" alt="Rapariga">
+    </div>
+    <div id="intro_text">
+      <h1>Olá! Sou a Sílvia.</h1>
+      <p>Sou uma rapariga apaixonada por viajar. Sempre que tenho oportunidade de conhecer novos sítios aqui vou eu.</p>
+      <p>Espero que este site te inspire para realizares as tuas próprias viagens.</p>
+      <a href="quemsoueu.html">Queres saber mais sobre mim?</a>
+    </div>
+  </div>
+
+  <!------------------------------- Footer ---------------------------------------------->
+  <div class="footer">
+	<div class="top-left">
+	  <p>Segue-me nas redes sociais</p>
+	  <a href="https://www.linkedin.com/in/sílvia-faria-9890a218a" target="_blank"> <i class="fab fa-linkedin"></i> </a>
+	  <a href="https://www.instagram.com/silviadnf/" target="_blank"> <i class="fab fa-instagram-square"></i> </a>
+	  <a href="https://www.facebook.com/silvia.faria.18" target="_blank"> <i class="fab fa-facebook-square"></i> </a>
+	</div>
+	
+	<div class="top-right">
+	  <a href="mailto:up201603368@fe.up.pt" class="email"> <span class="far fa-envelope"></span> up201603368@fe.up.pt</a>
+	</div>
+	
+	<div class="bottom-center">
+	  <p class="nameblog">Travel Blog</p>
+	  <p>Sílvia Faria</p>
+	</div>	
+  </div>
+
+</body>
+
+</html>
